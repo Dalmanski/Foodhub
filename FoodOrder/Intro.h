@@ -36,11 +36,12 @@ namespace FoodOrder {
 			}
 		}
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ OrderButton;
 	protected:
-	private: System::Windows::Forms::Button^ button1;
+
+	private: System::Windows::Forms::Label^ TitleName;
 	private: System::Windows::Forms::Label^ label1;
-
-
+	private: System::Windows::Forms::Label^ label2;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -56,8 +57,10 @@ namespace FoodOrder {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Intro::typeid));
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->OrderButton = (gcnew System::Windows::Forms::Button());
+			this->TitleName = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -67,36 +70,61 @@ namespace FoodOrder {
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox1->Location = System::Drawing::Point(85, 38);
+			this->pictureBox1->Location = System::Drawing::Point(81, 43);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(340, 321);
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
-			// button1
+			// OrderButton
 			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Arial Unicode MS", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->OrderButton->Font = (gcnew System::Drawing::Font(L"Arial Unicode MS", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(561, 244);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(139, 44);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"ORDER";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &Intro::button1_Click);
+			this->OrderButton->Location = System::Drawing::Point(563, 278);
+			this->OrderButton->Name = L"OrderButton";
+			this->OrderButton->Size = System::Drawing::Size(139, 44);
+			this->OrderButton->TabIndex = 1;
+			this->OrderButton->Text = L"ORDER";
+			this->OrderButton->UseVisualStyleBackColor = true;
+			this->OrderButton->Click += gcnew System::EventHandler(this, &Intro::OrderButton_Click);
+			// 
+			// TitleName
+			// 
+			this->TitleName->AutoSize = true;
+			this->TitleName->BackColor = System::Drawing::Color::Transparent;
+			this->TitleName->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 32.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->TitleName->Location = System::Drawing::Point(458, 103);
+			this->TitleName->Name = L"TitleName";
+			this->TitleName->Size = System::Drawing::Size(343, 56);
+			this->TitleName->TabIndex = 2;
+			this->TitleName->Text = L"WELCOME TO";
+			this->TitleName->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 32.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(458, 103);
+			this->label1->Location = System::Drawing::Point(536, 159);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(343, 112);
-			this->label1->TabIndex = 2;
-			this->label1->Text = L"WELCOME TO\r\nFOODHUB";
-			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->label1->Size = System::Drawing::Size(200, 42);
+			this->label1->TabIndex = 3;
+			this->label1->Text = L"McDeebug";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 32.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(504, 205);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(263, 56);
+			this->label2->TabIndex = 4;
+			this->label2->Text = L"FoodHub.";
+			this->label2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// Intro
 			// 
@@ -105,8 +133,10 @@ namespace FoodOrder {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(831, 397);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->TitleName);
+			this->Controls->Add(this->OrderButton);
 			this->Controls->Add(this->pictureBox1);
 			this->DoubleBuffered = true;
 			this->Name = L"Intro";
@@ -120,9 +150,10 @@ namespace FoodOrder {
 #pragma endregion
 	private: System::Void Intro_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void OrderButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		MenuOrder^ form = gcnew MenuOrder(this);
+		form->StartPosition = FormStartPosition::CenterScreen;
 		form->ShowDialog();
 	}
 	};

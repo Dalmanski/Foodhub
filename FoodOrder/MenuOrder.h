@@ -30,6 +30,9 @@ namespace FoodOrder {
 			//TODO: Add the constructor code here
 			//
 		}
+		static int numBurgers;
+		static int numCoke;
+		static int numChicken;
 
 	protected:
 		/// <summary>
@@ -43,14 +46,6 @@ namespace FoodOrder {
 			}
 		}
 	private: System::Windows::Forms::Button^ button1;
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Label^ label3;
@@ -203,7 +198,6 @@ namespace FoodOrder {
 			this->label2->Size = System::Drawing::Size(56, 13);
 			this->label2->TabIndex = 14;
 			this->label2->Text = L"Price: P45";
-			this->label2->Click += gcnew System::EventHandler(this, &MenuOrder::label2_Click);
 			// 
 			// button2
 			// 
@@ -265,6 +259,7 @@ namespace FoodOrder {
 			this->button5->TabIndex = 25;
 			this->button5->Text = L"-";
 			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &MenuOrder::button5_Click);
 			// 
 			// button6
 			// 
@@ -275,6 +270,7 @@ namespace FoodOrder {
 			this->button6->TabIndex = 24;
 			this->button6->Text = L"+";
 			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &MenuOrder::button6_Click);
 			// 
 			// label6
 			// 
@@ -284,7 +280,7 @@ namespace FoodOrder {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(56, 13);
 			this->label6->TabIndex = 23;
-			this->label6->Text = L"Price: P16";
+			this->label6->Text = L"Price: P35";
 			// 
 			// pictureBox3
 			// 
@@ -336,6 +332,7 @@ namespace FoodOrder {
 			this->button7->TabIndex = 32;
 			this->button7->Text = L"-";
 			this->button7->UseVisualStyleBackColor = false;
+			this->button7->Click += gcnew System::EventHandler(this, &MenuOrder::button7_Click);
 			// 
 			// button8
 			// 
@@ -346,6 +343,7 @@ namespace FoodOrder {
 			this->button8->TabIndex = 31;
 			this->button8->Text = L"+";
 			this->button8->UseVisualStyleBackColor = false;
+			this->button8->Click += gcnew System::EventHandler(this, &MenuOrder::button8_Click);
 			// 
 			// label9
 			// 
@@ -516,38 +514,66 @@ namespace FoodOrder {
 
 		}
 #pragma endregion
-	int sum1;
 
-	private: System::Void MenuOrder_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) { // back
-		this->Hide();
-		obj->Show();
-	}
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void MenuOrder_Load(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-
-}
-private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) { // add quantity
-	
-	int quantity1 = System::Convert::ToInt16(label4->Text);
-	quantity1++;
-	sum1 += 45;
-	label4->Text = quantity1.ToString();
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) { // dif quantity
-	if (System::Convert::ToInt32(label4->Text) > 0) {
-		int quantity1 = System::Convert::ToInt16(label4->Text);
-		quantity1--;
-		sum1 -= 45;
-		label4->Text = quantity1.ToString();
-	}
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) { // back
 	this->Hide();
-	Confirm^ form = gcnew Confirm(this);
-	form->ShowDialog();
+	obj->Show();
+}
+// Add burger quantity.
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) { 
+	numBurgers = System::Convert::ToInt16(label4->Text);
+	numBurgers++;
+	label4->Text = numBurgers.ToString();
+}
+// Minus burger quantity.
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (System::Convert::ToInt32(label4->Text) > 0) {
+		numBurgers = System::Convert::ToInt16(label4->Text);
+		numBurgers--;
+		label4->Text = numBurgers.ToString();
+	}
+}
+// Press Order Now.
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (numBurgers > 0 || numCoke > 0 || numChicken > 0 ) {
+		this->Hide();
+		Confirm^ form = gcnew Confirm(this);
+		form->SetData(numBurgers, numCoke, numChicken);
+		form->StartPosition = FormStartPosition::CenterScreen;
+		form->ShowDialog();
+	}
+	else {
+		System::Windows::Forms::MessageBox::Show("You have no order yet.");
+	}
+}
+// Add coke quantity
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	numCoke = System::Convert::ToInt16(label5->Text);
+	numCoke++;
+	label5->Text = numCoke.ToString();
+}
+// Minus coke quantity
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (System::Convert::ToInt32(label5->Text) > 0) {
+			numCoke = System::Convert::ToInt16(label5->Text);
+			numCoke--;
+			label5->Text = numCoke.ToString();
+		}
+	}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+	numChicken = System::Convert::ToInt16(label8->Text);
+	numChicken++;
+	label8->Text = numChicken.ToString();
+
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (System::Convert::ToInt32(label8->Text) > 0) {
+		numChicken = System::Convert::ToInt16(label8->Text);
+		numChicken--;
+		label8->Text = numChicken.ToString();
+	}
 }
 };
 }
