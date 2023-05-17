@@ -16,7 +16,7 @@ namespace FoodOrder {
 	public ref class MenuOrder : public System::Windows::Forms::Form
 	{
 	public:
-		Form^ obj; // This code is to go back form.
+		Form^ obj;
 		MenuOrder(Form^ form)
 		{
 			obj = form;
@@ -30,9 +30,6 @@ namespace FoodOrder {
 			//TODO: Add the constructor code here
 			//
 		}
-		static int numBurgers;
-		static int numCoke;
-		static int numChicken;
 
 	protected:
 		/// <summary>
@@ -77,6 +74,7 @@ namespace FoodOrder {
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::PictureBox^ pictureBox8;
+	private: System::Windows::Forms::Label^ label14;
 	protected:
 
 	private:
@@ -124,6 +122,7 @@ namespace FoodOrder {
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -151,7 +150,7 @@ namespace FoodOrder {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Marcellus SC", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(352, 9);
+			this->label1->Location = System::Drawing::Point(352, 15);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(129, 46);
 			this->label1->TabIndex = 9;
@@ -161,7 +160,7 @@ namespace FoodOrder {
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::MistyRose;
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox1->Location = System::Drawing::Point(44, 65);
+			this->pictureBox1->Location = System::Drawing::Point(43, 76);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(163, 167);
 			this->pictureBox1->TabIndex = 11;
@@ -171,7 +170,7 @@ namespace FoodOrder {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Location = System::Drawing::Point(105, 71);
+			this->label3->Location = System::Drawing::Point(104, 82);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(38, 13);
 			this->label3->TabIndex = 12;
@@ -183,7 +182,7 @@ namespace FoodOrder {
 			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox2->Location = System::Drawing::Point(54, 91);
+			this->pictureBox2->Location = System::Drawing::Point(53, 102);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(142, 111);
 			this->pictureBox2->TabIndex = 13;
@@ -193,7 +192,7 @@ namespace FoodOrder {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Location = System::Drawing::Point(50, 213);
+			this->label2->Location = System::Drawing::Point(49, 224);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(56, 13);
 			this->label2->TabIndex = 14;
@@ -202,7 +201,7 @@ namespace FoodOrder {
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::Transparent;
-			this->button2->Location = System::Drawing::Point(179, 207);
+			this->button2->Location = System::Drawing::Point(178, 218);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(21, 22);
 			this->button2->TabIndex = 16;
@@ -213,7 +212,7 @@ namespace FoodOrder {
 			// button3
 			// 
 			this->button3->BackColor = System::Drawing::Color::Transparent;
-			this->button3->Location = System::Drawing::Point(133, 207);
+			this->button3->Location = System::Drawing::Point(132, 218);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(21, 22);
 			this->button3->TabIndex = 17;
@@ -224,7 +223,7 @@ namespace FoodOrder {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(160, 212);
+			this->label4->Location = System::Drawing::Point(159, 223);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(13, 13);
 			this->label4->TabIndex = 18;
@@ -244,7 +243,7 @@ namespace FoodOrder {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(354, 212);
+			this->label5->Location = System::Drawing::Point(353, 223);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(13, 13);
 			this->label5->TabIndex = 26;
@@ -253,7 +252,7 @@ namespace FoodOrder {
 			// button5
 			// 
 			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->Location = System::Drawing::Point(327, 207);
+			this->button5->Location = System::Drawing::Point(326, 218);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(21, 22);
 			this->button5->TabIndex = 25;
@@ -264,7 +263,7 @@ namespace FoodOrder {
 			// button6
 			// 
 			this->button6->BackColor = System::Drawing::Color::Transparent;
-			this->button6->Location = System::Drawing::Point(373, 207);
+			this->button6->Location = System::Drawing::Point(372, 218);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(21, 22);
 			this->button6->TabIndex = 24;
@@ -276,7 +275,7 @@ namespace FoodOrder {
 			// 
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::Color::Transparent;
-			this->label6->Location = System::Drawing::Point(244, 213);
+			this->label6->Location = System::Drawing::Point(243, 224);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(56, 13);
 			this->label6->TabIndex = 23;
@@ -288,7 +287,7 @@ namespace FoodOrder {
 			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.BackgroundImage")));
 			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->pictureBox3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox3->Location = System::Drawing::Point(248, 91);
+			this->pictureBox3->Location = System::Drawing::Point(247, 102);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(142, 111);
 			this->pictureBox3->TabIndex = 22;
@@ -298,7 +297,7 @@ namespace FoodOrder {
 			// 
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::Color::Transparent;
-			this->label7->Location = System::Drawing::Point(291, 71);
+			this->label7->Location = System::Drawing::Point(290, 82);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(56, 13);
 			this->label7->TabIndex = 21;
@@ -308,7 +307,7 @@ namespace FoodOrder {
 			// 
 			this->pictureBox4->BackColor = System::Drawing::Color::MistyRose;
 			this->pictureBox4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox4->Location = System::Drawing::Point(238, 65);
+			this->pictureBox4->Location = System::Drawing::Point(237, 76);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(163, 167);
 			this->pictureBox4->TabIndex = 20;
@@ -317,7 +316,7 @@ namespace FoodOrder {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(545, 212);
+			this->label8->Location = System::Drawing::Point(544, 223);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(13, 13);
 			this->label8->TabIndex = 33;
@@ -326,7 +325,7 @@ namespace FoodOrder {
 			// button7
 			// 
 			this->button7->BackColor = System::Drawing::Color::Transparent;
-			this->button7->Location = System::Drawing::Point(518, 207);
+			this->button7->Location = System::Drawing::Point(517, 218);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(21, 22);
 			this->button7->TabIndex = 32;
@@ -337,7 +336,7 @@ namespace FoodOrder {
 			// button8
 			// 
 			this->button8->BackColor = System::Drawing::Color::Transparent;
-			this->button8->Location = System::Drawing::Point(564, 207);
+			this->button8->Location = System::Drawing::Point(563, 218);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(21, 22);
 			this->button8->TabIndex = 31;
@@ -349,11 +348,11 @@ namespace FoodOrder {
 			// 
 			this->label9->AutoSize = true;
 			this->label9->BackColor = System::Drawing::Color::Transparent;
-			this->label9->Location = System::Drawing::Point(435, 213);
+			this->label9->Location = System::Drawing::Point(434, 224);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(56, 13);
 			this->label9->TabIndex = 30;
-			this->label9->Text = L"Price: P75";
+			this->label9->Text = L"Price: P89";
 			// 
 			// pictureBox5
 			// 
@@ -361,7 +360,7 @@ namespace FoodOrder {
 			this->pictureBox5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.BackgroundImage")));
 			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox5->Location = System::Drawing::Point(439, 91);
+			this->pictureBox5->Location = System::Drawing::Point(438, 102);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(142, 111);
 			this->pictureBox5->TabIndex = 29;
@@ -371,7 +370,7 @@ namespace FoodOrder {
 			// 
 			this->label10->AutoSize = true;
 			this->label10->BackColor = System::Drawing::Color::Transparent;
-			this->label10->Location = System::Drawing::Point(486, 71);
+			this->label10->Location = System::Drawing::Point(485, 82);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(46, 13);
 			this->label10->TabIndex = 28;
@@ -381,7 +380,7 @@ namespace FoodOrder {
 			// 
 			this->pictureBox6->BackColor = System::Drawing::Color::MistyRose;
 			this->pictureBox6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox6->Location = System::Drawing::Point(429, 65);
+			this->pictureBox6->Location = System::Drawing::Point(428, 76);
 			this->pictureBox6->Name = L"pictureBox6";
 			this->pictureBox6->Size = System::Drawing::Size(163, 167);
 			this->pictureBox6->TabIndex = 27;
@@ -390,7 +389,7 @@ namespace FoodOrder {
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(739, 212);
+			this->label11->Location = System::Drawing::Point(738, 223);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(13, 13);
 			this->label11->TabIndex = 40;
@@ -399,32 +398,34 @@ namespace FoodOrder {
 			// button9
 			// 
 			this->button9->BackColor = System::Drawing::Color::Transparent;
-			this->button9->Location = System::Drawing::Point(712, 207);
+			this->button9->Location = System::Drawing::Point(711, 218);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(21, 22);
 			this->button9->TabIndex = 39;
 			this->button9->Text = L"-";
 			this->button9->UseVisualStyleBackColor = false;
+			this->button9->Click += gcnew System::EventHandler(this, &MenuOrder::button9_Click);
 			// 
 			// button10
 			// 
 			this->button10->BackColor = System::Drawing::Color::Transparent;
-			this->button10->Location = System::Drawing::Point(758, 207);
+			this->button10->Location = System::Drawing::Point(757, 218);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(21, 22);
 			this->button10->TabIndex = 38;
 			this->button10->Text = L"+";
 			this->button10->UseVisualStyleBackColor = false;
+			this->button10->Click += gcnew System::EventHandler(this, &MenuOrder::button10_Click);
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
 			this->label12->BackColor = System::Drawing::Color::Transparent;
-			this->label12->Location = System::Drawing::Point(629, 213);
+			this->label12->Location = System::Drawing::Point(628, 224);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(62, 13);
+			this->label12->Size = System::Drawing::Size(56, 13);
 			this->label12->TabIndex = 37;
-			this->label12->Text = L"Price: P200";
+			this->label12->Text = L"Price: P50";
 			// 
 			// pictureBox7
 			// 
@@ -432,7 +433,7 @@ namespace FoodOrder {
 			this->pictureBox7->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.BackgroundImage")));
 			this->pictureBox7->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox7->Location = System::Drawing::Point(633, 91);
+			this->pictureBox7->Location = System::Drawing::Point(632, 102);
 			this->pictureBox7->Name = L"pictureBox7";
 			this->pictureBox7->Size = System::Drawing::Size(142, 111);
 			this->pictureBox7->TabIndex = 36;
@@ -442,21 +443,33 @@ namespace FoodOrder {
 			// 
 			this->label13->AutoSize = true;
 			this->label13->BackColor = System::Drawing::Color::Transparent;
-			this->label13->Location = System::Drawing::Point(665, 71);
+			this->label13->Location = System::Drawing::Point(676, 82);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(83, 13);
+			this->label13->Size = System::Drawing::Size(52, 13);
 			this->label13->TabIndex = 35;
-			this->label13->Text = L"Mr Beast Burger";
+			this->label13->Text = L"Spaghetti";
 			// 
 			// pictureBox8
 			// 
 			this->pictureBox8->BackColor = System::Drawing::Color::MistyRose;
 			this->pictureBox8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox8->Location = System::Drawing::Point(623, 65);
+			this->pictureBox8->Location = System::Drawing::Point(622, 76);
 			this->pictureBox8->Name = L"pictureBox8";
 			this->pictureBox8->Size = System::Drawing::Size(163, 167);
 			this->pictureBox8->TabIndex = 34;
 			this->pictureBox8->TabStop = false;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->BackColor = System::Drawing::Color::Transparent;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Marcellus SC", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label14->Location = System::Drawing::Point(299, 278);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(258, 26);
+			this->label14->TabIndex = 41;
+			this->label14->Text = L"Please choose your order.";
 			// 
 			// MenuOrder
 			// 
@@ -466,6 +479,7 @@ namespace FoodOrder {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(832, 400);
+			this->Controls->Add(this->label14);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button10);
@@ -515,32 +529,21 @@ namespace FoodOrder {
 		}
 #pragma endregion
 
+static int numBurgers, numCoke, numChicken, numSpaghetti;
+
 private: System::Void MenuOrder_Load(System::Object^ sender, System::EventArgs^ e) {
 }
+// Press back button.
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) { // back
 	this->Hide();
 	obj->Show();
 }
-// Add burger quantity.
-private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) { 
-	numBurgers = System::Convert::ToInt16(label4->Text);
-	numBurgers++;
-	label4->Text = numBurgers.ToString();
-}
-// Minus burger quantity.
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (System::Convert::ToInt32(label4->Text) > 0) {
-		numBurgers = System::Convert::ToInt16(label4->Text);
-		numBurgers--;
-		label4->Text = numBurgers.ToString();
-	}
-}
 // Press Order Now.
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (numBurgers > 0 || numCoke > 0 || numChicken > 0 ) {
+	if (numBurgers > 0 || numCoke > 0 || numChicken > 0 || numSpaghetti > 0) {
 		this->Hide();
 		Confirm^ form = gcnew Confirm(this);
-		form->SetData(numBurgers, numCoke, numChicken);
+		form->SetData(numBurgers, numCoke, numChicken, numSpaghetti);
 		form->StartPosition = FormStartPosition::CenterScreen;
 		form->ShowDialog();
 	}
@@ -548,13 +551,27 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 		System::Windows::Forms::MessageBox::Show("You have no order yet.");
 	}
 }
-// Add coke quantity
+// Add burger quantity. Label4 is the Text Quantity.
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) { 
+	numBurgers = System::Convert::ToInt16(label4->Text);
+	numBurgers++;
+	label4->Text = numBurgers.ToString();
+}
+// Minus burger quantity. Label4 is the Text Quantity.
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (System::Convert::ToInt32(label4->Text) > 0) {
+		numBurgers = System::Convert::ToInt16(label4->Text);
+		numBurgers--;
+		label4->Text = numBurgers.ToString();
+	}
+}
+// Add coke quantity. Label5 is the Text Quantity.
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	numCoke = System::Convert::ToInt16(label5->Text);
 	numCoke++;
 	label5->Text = numCoke.ToString();
 }
-// Minus coke quantity
+// Minus coke quantity. Label5 is the Text Quantity.
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (System::Convert::ToInt32(label5->Text) > 0) {
 			numCoke = System::Convert::ToInt16(label5->Text);
@@ -562,12 +579,13 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 			label5->Text = numCoke.ToString();
 		}
 	}
+// Add chicken quantity. Label8 is the Text Quantity.
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 	numChicken = System::Convert::ToInt16(label8->Text);
 	numChicken++;
 	label8->Text = numChicken.ToString();
-
 }
+// Minus chicken quantity. Label8 is the Text Quantity.
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (System::Convert::ToInt32(label8->Text) > 0) {
 		numChicken = System::Convert::ToInt16(label8->Text);
@@ -575,5 +593,20 @@ private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e
 		label8->Text = numChicken.ToString();
 	}
 }
+// Add Spaghetti quantity. Label11 is the Text Quantity.
+private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+	numSpaghetti = System::Convert::ToInt16(label11->Text);
+	numSpaghetti++;
+	label11->Text = numSpaghetti.ToString();
+}
+// Minus Spaghetti quantity. Label11 is the Text Quantity.
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (System::Convert::ToInt32(label11->Text) > 0 ) {
+		numSpaghetti = System::Convert::ToInt16(label11->Text);
+		numSpaghetti--;
+		label11->Text = numSpaghetti.ToString();
+	}
+}
+
 };
 }

@@ -15,10 +15,11 @@ namespace FoodOrder {
 
 	public ref class Confirm : public System::Windows::Forms::Form
 	{
-	private: int quan1, quan2, quan3;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::Label^ OrderPrice;
+	private: int quan1, quan2, quan3, quan4; // Declare this variables from SetData function.
 	public:
-		Form^ obj; // This code is to go back form.
+		Form^ obj;
 		Confirm(Form^ form)
 		{
 			obj = form;
@@ -32,10 +33,12 @@ namespace FoodOrder {
 			//TODO: Add the constructor code here
 			//
 		}
-		void SetData(int numBurgers, int numCoke, int numChicken) {
+		// This is function of SetData in previous form.
+		void SetData( int numBurgers, int numCoke, int numChicken, int numSpaghetti ) {
 			quan1 = numBurgers;
 			quan2 = numCoke;
 			quan3 = numChicken;
+			quan4 = numSpaghetti;
 		}
 
 	protected:
@@ -68,7 +71,8 @@ namespace FoodOrder {
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Label^ OrderList;
 	private: System::Windows::Forms::Label^ OrderAmount;
-	private: System::Windows::Forms::Label^ OrderPrice;
+	private: System::Windows::Forms::Label^ OrderSubTotal;
+
 
 	private:
 		/// <summary>
@@ -97,8 +101,9 @@ namespace FoodOrder {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->OrderList = (gcnew System::Windows::Forms::Label());
 			this->OrderAmount = (gcnew System::Windows::Forms::Label());
-			this->OrderPrice = (gcnew System::Windows::Forms::Label());
+			this->OrderSubTotal = (gcnew System::Windows::Forms::Label());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->OrderPrice = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -109,7 +114,7 @@ namespace FoodOrder {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Maiandra GD", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(231, 28);
+			this->label1->Location = System::Drawing::Point(181, 23);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(381, 39);
 			this->label1->TabIndex = 0;
@@ -118,7 +123,7 @@ namespace FoodOrder {
 			// pictureBox1
 			// 
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox1->Location = System::Drawing::Point(117, 100);
+			this->pictureBox1->Location = System::Drawing::Point(105, 87);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(250, 233);
 			this->pictureBox1->TabIndex = 1;
@@ -126,9 +131,9 @@ namespace FoodOrder {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(333, 353);
+			this->button1->Location = System::Drawing::Point(270, 340);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(91, 32);
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"BACK";
 			this->button1->UseVisualStyleBackColor = true;
@@ -137,7 +142,7 @@ namespace FoodOrder {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(486, 138);
+			this->label5->Location = System::Drawing::Point(407, 125);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(41, 13);
 			this->label5->TabIndex = 7;
@@ -145,7 +150,7 @@ namespace FoodOrder {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(556, 135);
+			this->textBox1->Location = System::Drawing::Point(477, 122);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(149, 20);
 			this->textBox1->TabIndex = 8;
@@ -153,7 +158,7 @@ namespace FoodOrder {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(486, 168);
+			this->label6->Location = System::Drawing::Point(407, 155);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(62, 13);
 			this->label6->TabIndex = 9;
@@ -161,14 +166,14 @@ namespace FoodOrder {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(556, 165);
+			this->textBox2->Location = System::Drawing::Point(477, 152);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(149, 20);
 			this->textBox2->TabIndex = 10;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(556, 194);
+			this->textBox3->Location = System::Drawing::Point(477, 181);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(149, 20);
 			this->textBox3->TabIndex = 12;
@@ -176,7 +181,7 @@ namespace FoodOrder {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(486, 197);
+			this->label7->Location = System::Drawing::Point(407, 184);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(71, 13);
 			this->label7->TabIndex = 11;
@@ -186,7 +191,7 @@ namespace FoodOrder {
 			// TotalPrice
 			// 
 			this->TotalPrice->AutoSize = true;
-			this->TotalPrice->Location = System::Drawing::Point(276, 308);
+			this->TotalPrice->Location = System::Drawing::Point(264, 295);
 			this->TotalPrice->Name = L"TotalPrice";
 			this->TotalPrice->Size = System::Drawing::Size(45, 13);
 			this->TotalPrice->TabIndex = 13;
@@ -194,9 +199,9 @@ namespace FoodOrder {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(439, 353);
+			this->button2->Location = System::Drawing::Point(388, 340);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->Size = System::Drawing::Size(89, 32);
 			this->button2->TabIndex = 14;
 			this->button2->Text = L"CONFIRM";
 			this->button2->UseVisualStyleBackColor = true;
@@ -205,41 +210,51 @@ namespace FoodOrder {
 			// OrderList
 			// 
 			this->OrderList->AutoSize = true;
-			this->OrderList->Location = System::Drawing::Point(146, 126);
+			this->OrderList->Location = System::Drawing::Point(112, 113);
 			this->OrderList->Name = L"OrderList";
-			this->OrderList->Size = System::Drawing::Size(46, 13);
+			this->OrderList->Size = System::Drawing::Size(49, 13);
 			this->OrderList->TabIndex = 15;
-			this->OrderList->Text = L"ORDER";
+			this->OrderList->Text = L"ORDER:";
 			this->OrderList->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// OrderAmount
 			// 
 			this->OrderAmount->AutoSize = true;
-			this->OrderAmount->Location = System::Drawing::Point(216, 126);
+			this->OrderAmount->Location = System::Drawing::Point(219, 113);
 			this->OrderAmount->Name = L"OrderAmount";
-			this->OrderAmount->Size = System::Drawing::Size(54, 13);
+			this->OrderAmount->Size = System::Drawing::Size(65, 13);
 			this->OrderAmount->TabIndex = 16;
-			this->OrderAmount->Text = L"AMOUNT";
+			this->OrderAmount->Text = L"QUANTITY:";
 			this->OrderAmount->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
-			// OrderPrice
+			// OrderSubTotal
 			// 
-			this->OrderPrice->AutoSize = true;
-			this->OrderPrice->Location = System::Drawing::Point(294, 126);
-			this->OrderPrice->Name = L"OrderPrice";
-			this->OrderPrice->Size = System::Drawing::Size(39, 13);
-			this->OrderPrice->TabIndex = 17;
-			this->OrderPrice->Text = L"PRICE";
-			this->OrderPrice->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->OrderSubTotal->AutoSize = true;
+			this->OrderSubTotal->Location = System::Drawing::Point(286, 113);
+			this->OrderSubTotal->Name = L"OrderSubTotal";
+			this->OrderSubTotal->Size = System::Drawing::Size(67, 13);
+			this->OrderSubTotal->TabIndex = 17;
+			this->OrderSubTotal->Text = L"SUBTOTAL:";
+			this->OrderSubTotal->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// pictureBox2
 			// 
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox2->Location = System::Drawing::Point(472, 100);
+			this->pictureBox2->Location = System::Drawing::Point(393, 87);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(250, 233);
 			this->pictureBox2->TabIndex = 18;
 			this->pictureBox2->TabStop = false;
+			// 
+			// OrderPrice
+			// 
+			this->OrderPrice->AutoSize = true;
+			this->OrderPrice->Location = System::Drawing::Point(170, 113);
+			this->OrderPrice->Name = L"OrderPrice";
+			this->OrderPrice->Size = System::Drawing::Size(42, 13);
+			this->OrderPrice->TabIndex = 19;
+			this->OrderPrice->Text = L"PRICE:";
+			this->OrderPrice->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// Confirm
 			// 
@@ -247,8 +262,9 @@ namespace FoodOrder {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(836, 388);
+			this->ClientSize = System::Drawing::Size(745, 384);
 			this->Controls->Add(this->OrderPrice);
+			this->Controls->Add(this->OrderSubTotal);
 			this->Controls->Add(this->OrderAmount);
 			this->Controls->Add(this->OrderList);
 			this->Controls->Add(this->button2);
@@ -277,54 +293,57 @@ namespace FoodOrder {
 	private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void Confirm_Load(System::Object^ sender, System::EventArgs^ e) {
-	// quan1 declaration is at the above.
-	int BurgerPrize = 45, CokePrize = 35, ChickenPrize = 75;
-	int sum = 0;
-	int total = 0;
+	// quan1, quan2, quan3 and quan4 declaration is at the above.
+	int BurgerPrize = 45, CokePrize = 35, ChickenPrize = 89, SpaghettiPrize = 50;
+	int sum = 0, total = 0;
 	// If you buy a burger.
 	if (quan1 > 0) {
 		OrderList->Text += "\nBurger";
+		OrderPrice->Text += "\nP" + BurgerPrize;
 		OrderAmount->Text += "\n" + quan1;
-		sum = 0;
-		for (int i = 0; i < quan1; i++) {
-			sum += BurgerPrize;
-			total += BurgerPrize;
-		}
-		OrderPrice->Text += "\nP" + sum;
+		OrderSubTotal->Text += "\nP" + (quan1 * BurgerPrize);
+		total += quan1 * BurgerPrize;
 	}
 	// If you buy a coke.
 	if (quan2 > 0) {
 		OrderList->Text += "\nCoke";
+		OrderPrice->Text += "\nP" + CokePrize;
 		OrderAmount->Text += "\n" + quan2;
-		sum = 0;
-		for (int i = 0; i < quan2; i++) {
-			sum += CokePrize;
-			total += CokePrize;
-		}
-		OrderPrice->Text += "\nP" + sum;
+		OrderSubTotal->Text += "\nP" + (quan2 * CokePrize);
+		total += quan2 * CokePrize;
 	}
+	// If you buy a chicken.
 	if (quan3 > 0) {
 		OrderList->Text += "\nChicken";
+		OrderPrice->Text += "\nP" + ChickenPrize;
 		OrderAmount->Text += "\n" + quan3;
-		sum = 0;
-		for (int i = 0; i < quan3; i++) {
-			sum += ChickenPrize;
-			total += ChickenPrize;
-		}
-		OrderPrice->Text += "\nP" + sum;
+		OrderSubTotal->Text += "\nP" + (quan3 * ChickenPrize);
+		total += quan3 * ChickenPrize;
 	}
+	// If you buy a Spaghetti.
+	if (quan4 > 0) {
+		OrderList->Text += "\nSpaghetti";
+		OrderPrice->Text += "\nP" + SpaghettiPrize;
+		OrderAmount->Text += "\n" + quan4;
+		OrderSubTotal->Text += "\nP" + (quan4 * SpaghettiPrize);
+		total += quan4 * SpaghettiPrize;
+	}
+	// After that, show the total of price.
 	TotalPrice->Text += " P" + total;
 }
+// Press to go back and reset the text.
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	OrderList->Text = "ORDER";
-	OrderAmount->Text = "AMOUNT";
-	OrderPrice->Text = "PRICE";
+	OrderList->Text = "ORDER:";
+	OrderPrice->Text = "PRICE:";
+	OrderAmount->Text = "QUANTITY:";
+	OrderSubTotal->Text = "SUBTOTAL:";
 	this->Hide();
 	obj->Show();
 }
+// When you press confirm button.
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (textBox1->Text != "" && textBox2->Text != "" && textBox3->Text != "") {
-		System::Windows::Forms::MessageBox::Show("Thank you for trusting McDeeebug FoodHub.");
+		System::Windows::Forms::MessageBox::Show("Thank you " + textBox1->Text + " for trusting McDeeebug FoodHub.");
 	}
 	else {
 		System::Windows::Forms::MessageBox::Show("Please complete this form.");

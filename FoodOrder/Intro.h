@@ -150,6 +150,7 @@ namespace FoodOrder {
 #pragma endregion
 	private: System::Void Intro_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+	// When you press Order button.
 	private: System::Void OrderButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		MenuOrder^ form = gcnew MenuOrder(this);
