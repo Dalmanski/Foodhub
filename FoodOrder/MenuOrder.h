@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Confirm.h"
 
 namespace FoodOrder {
@@ -136,6 +136,7 @@ namespace FoodOrder {
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Location = System::Drawing::Point(266, 337);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(132, 43);
@@ -196,7 +197,7 @@ namespace FoodOrder {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(56, 13);
 			this->label2->TabIndex = 14;
-			this->label2->Text = L"Price: P45";
+			this->label2->Text = L"Price: ₱45";
 			// 
 			// button2
 			// 
@@ -232,6 +233,7 @@ namespace FoodOrder {
 			// button4
 			// 
 			this->button4->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button4->Location = System::Drawing::Point(437, 337);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(132, 43);
@@ -279,7 +281,7 @@ namespace FoodOrder {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(56, 13);
 			this->label6->TabIndex = 23;
-			this->label6->Text = L"Price: P35";
+			this->label6->Text = L"Price: ₱35";
 			// 
 			// pictureBox3
 			// 
@@ -352,7 +354,7 @@ namespace FoodOrder {
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(56, 13);
 			this->label9->TabIndex = 30;
-			this->label9->Text = L"Price: P89";
+			this->label9->Text = L"Price: ₱89";
 			// 
 			// pictureBox5
 			// 
@@ -425,7 +427,7 @@ namespace FoodOrder {
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(56, 13);
 			this->label12->TabIndex = 37;
-			this->label12->Text = L"Price: P50";
+			this->label12->Text = L"Price: ₱50";
 			// 
 			// pictureBox7
 			// 
