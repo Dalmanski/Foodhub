@@ -118,6 +118,8 @@ namespace FoodOrder {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Maiandra GD", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->label1->Location = System::Drawing::Point(181, 23);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(381, 39);
@@ -126,8 +128,10 @@ namespace FoodOrder {
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox1->Location = System::Drawing::Point(105, 87);
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->pictureBox1->Location = System::Drawing::Point(105, 78);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(250, 233);
 			this->pictureBox1->TabIndex = 1;
@@ -135,8 +139,11 @@ namespace FoodOrder {
 			// 
 			// button1
 			// 
+			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button1->Location = System::Drawing::Point(270, 340);
+			this->button1->ForeColor = System::Drawing::Color::White;
+			this->button1->Location = System::Drawing::Point(270, 336);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(91, 32);
 			this->button1->TabIndex = 5;
@@ -147,15 +154,18 @@ namespace FoodOrder {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(407, 141);
+			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(404, 131);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(41, 13);
+			this->label5->Size = System::Drawing::Size(74, 14);
 			this->label5->TabIndex = 7;
-			this->label5->Text = L"NAME:";
+			this->label5->Text = L"NAME:          ";
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(481, 138);
+			this->textBox1->Location = System::Drawing::Point(484, 129);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(149, 20);
 			this->textBox1->TabIndex = 8;
@@ -163,22 +173,25 @@ namespace FoodOrder {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(407, 171);
+			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(404, 161);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(62, 13);
+			this->label6->Size = System::Drawing::Size(73, 14);
 			this->label6->TabIndex = 9;
-			this->label6->Text = L"ADDRESS:";
+			this->label6->Text = L"ADDRESS:   ";
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(481, 168);
+			this->textBox2->Location = System::Drawing::Point(484, 159);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(149, 20);
 			this->textBox2->TabIndex = 10;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(481, 197);
+			this->textBox3->Location = System::Drawing::Point(484, 188);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(149, 20);
 			this->textBox3->TabIndex = 12;
@@ -186,9 +199,12 @@ namespace FoodOrder {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(407, 200);
+			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(404, 190);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(71, 13);
+			this->label7->Size = System::Drawing::Size(72, 14);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"CONTACT #:";
 			this->label7->Click += gcnew System::EventHandler(this, &Confirm::label7_Click);
@@ -196,16 +212,25 @@ namespace FoodOrder {
 			// TotalPrice
 			// 
 			this->TotalPrice->AutoSize = true;
-			this->TotalPrice->Location = System::Drawing::Point(264, 295);
+			this->TotalPrice->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->TotalPrice->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->TotalPrice->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->TotalPrice->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->TotalPrice->Location = System::Drawing::Point(259, 285);
 			this->TotalPrice->Name = L"TotalPrice";
-			this->TotalPrice->Size = System::Drawing::Size(45, 13);
+			this->TotalPrice->Size = System::Drawing::Size(53, 15);
 			this->TotalPrice->TabIndex = 13;
 			this->TotalPrice->Text = L"TOTAL:";
 			// 
 			// button2
 			// 
+			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
+			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button2->Location = System::Drawing::Point(388, 340);
+			this->button2->ForeColor = System::Drawing::Color::White;
+			this->button2->Location = System::Drawing::Point(388, 336);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(89, 32);
 			this->button2->TabIndex = 14;
@@ -217,20 +242,26 @@ namespace FoodOrder {
 			// 
 			this->OrderList->AutoSize = true;
 			this->OrderList->BackColor = System::Drawing::SystemColors::Control;
-			this->OrderList->Location = System::Drawing::Point(109, 138);
+			this->OrderList->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->OrderList->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->OrderList->Location = System::Drawing::Point(113, 129);
 			this->OrderList->Name = L"OrderList";
-			this->OrderList->Size = System::Drawing::Size(49, 13);
+			this->OrderList->Size = System::Drawing::Size(53, 14);
 			this->OrderList->TabIndex = 15;
-			this->OrderList->Text = L"ORDER:\r\n";
+			this->OrderList->Text = L"ORDER: \r\n";
 			this->OrderList->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// OrderAmount
 			// 
 			this->OrderAmount->AutoSize = true;
 			this->OrderAmount->BackColor = System::Drawing::SystemColors::Control;
-			this->OrderAmount->Location = System::Drawing::Point(216, 138);
+			this->OrderAmount->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->OrderAmount->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->OrderAmount->Location = System::Drawing::Point(211, 129);
 			this->OrderAmount->Name = L"OrderAmount";
-			this->OrderAmount->Size = System::Drawing::Size(65, 13);
+			this->OrderAmount->Size = System::Drawing::Size(65, 14);
 			this->OrderAmount->TabIndex = 16;
 			this->OrderAmount->Text = L"QUANTITY:\r\n";
 			this->OrderAmount->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -239,17 +270,22 @@ namespace FoodOrder {
 			// 
 			this->OrderSubTotal->AutoSize = true;
 			this->OrderSubTotal->BackColor = System::Drawing::SystemColors::Control;
-			this->OrderSubTotal->Location = System::Drawing::Point(283, 138);
+			this->OrderSubTotal->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->OrderSubTotal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->OrderSubTotal->Location = System::Drawing::Point(276, 129);
 			this->OrderSubTotal->Name = L"OrderSubTotal";
-			this->OrderSubTotal->Size = System::Drawing::Size(67, 13);
+			this->OrderSubTotal->Size = System::Drawing::Size(67, 14);
 			this->OrderSubTotal->TabIndex = 17;
 			this->OrderSubTotal->Text = L"SUBTOTAL:\r\n";
 			this->OrderSubTotal->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// pictureBox2
 			// 
-			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox2->Location = System::Drawing::Point(393, 87);
+			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.BackgroundImage")));
+			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->pictureBox2->Location = System::Drawing::Point(393, 78);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(250, 233);
 			this->pictureBox2->TabIndex = 18;
@@ -259,9 +295,12 @@ namespace FoodOrder {
 			// 
 			this->OrderPrice->AutoSize = true;
 			this->OrderPrice->BackColor = System::Drawing::SystemColors::Control;
-			this->OrderPrice->Location = System::Drawing::Point(167, 138);
+			this->OrderPrice->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->OrderPrice->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->OrderPrice->Location = System::Drawing::Point(166, 129);
 			this->OrderPrice->Name = L"OrderPrice";
-			this->OrderPrice->Size = System::Drawing::Size(42, 13);
+			this->OrderPrice->Size = System::Drawing::Size(45, 14);
 			this->OrderPrice->TabIndex = 19;
 			this->OrderPrice->Text = L"PRICE:\r\n";
 			this->OrderPrice->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -270,9 +309,12 @@ namespace FoodOrder {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::SystemColors::Control;
-			this->label2->Location = System::Drawing::Point(464, 108);
+			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(464, 99);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(107, 13);
+			this->label2->Size = System::Drawing::Size(111, 14);
 			this->label2->TabIndex = 20;
 			this->label2->Text = L"FILL UP USER INFO";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -281,9 +323,12 @@ namespace FoodOrder {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::SystemColors::Control;
-			this->label3->Location = System::Drawing::Point(203, 108);
+			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(203, 99);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(53, 13);
+			this->label3->Size = System::Drawing::Size(54, 14);
 			this->label3->TabIndex = 21;
 			this->label3->Text = L"RECEIPT";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
