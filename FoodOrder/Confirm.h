@@ -412,7 +412,7 @@ private: System::Void Confirm_Load(System::Object^ sender, System::EventArgs^ e)
 		total += quan4 * SpaghettiPrize;
 	}
 	// After that, show the total of price.
-	TotalPrice->Text += " " + pesoSign + total;
+	TotalPrice->Text = "TOTAL: " + pesoSign + total;
 }
 // Press to go back and reset the text.
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -420,6 +420,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	OrderPrice->Text = "PRICE:";
 	OrderAmount->Text = "QUANTITY:";
 	OrderSubTotal->Text = "SUBTOTAL:";
+	TotalPrice->Text = "TOTAL:";
 	this->Hide();
 	obj->Show();
 }
