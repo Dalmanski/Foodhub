@@ -127,9 +127,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Confirm.cpp" />
     <ClCompile Include="Intro.cpp" />
-    <ClCompile Include="MenuOrder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Confirm.h">

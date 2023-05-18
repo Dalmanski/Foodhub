@@ -1,6 +1,8 @@
 ﻿#pragma once
+// Declare the 3rd form.
 #include "Confirm.h"
 
+// This code is automatically generate.
 namespace FoodOrder {
 
 	using namespace System;
@@ -136,8 +138,11 @@ namespace FoodOrder {
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button1->Location = System::Drawing::Point(266, 337);
+			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->ForeColor = System::Drawing::SystemColors::Control;
+			this->button1->Location = System::Drawing::Point(266, 344);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(132, 43);
 			this->button1->TabIndex = 0;
@@ -151,7 +156,9 @@ namespace FoodOrder {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Marcellus SC", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(352, 15);
+			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label1->Location = System::Drawing::Point(352, 8);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(129, 46);
 			this->label1->TabIndex = 9;
@@ -160,8 +167,9 @@ namespace FoodOrder {
 			// pictureBox1
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::MistyRose;
-			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox1->Location = System::Drawing::Point(43, 76);
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->pictureBox1->Location = System::Drawing::Point(44, 85);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(163, 167);
 			this->pictureBox1->TabIndex = 11;
@@ -170,10 +178,15 @@ namespace FoodOrder {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Location = System::Drawing::Point(104, 82);
+			this->label3->BackColor = System::Drawing::Color::Black;
+			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label3->Location = System::Drawing::Point(102, 91);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(38, 13);
+			this->label3->Size = System::Drawing::Size(45, 17);
 			this->label3->TabIndex = 12;
 			this->label3->Text = L"Burger";
 			// 
@@ -183,7 +196,7 @@ namespace FoodOrder {
 			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox2->Location = System::Drawing::Point(53, 102);
+			this->pictureBox2->Location = System::Drawing::Point(54, 111);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(142, 111);
 			this->pictureBox2->TabIndex = 13;
@@ -192,17 +205,29 @@ namespace FoodOrder {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Location = System::Drawing::Point(49, 224);
+			this->label2->BackColor = System::Drawing::Color::Black;
+			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label2->Location = System::Drawing::Point(50, 229);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(56, 13);
+			this->label2->Size = System::Drawing::Size(63, 17);
 			this->label2->TabIndex = 14;
 			this->label2->Text = L"Price: ₱45";
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::Transparent;
-			this->button2->Location = System::Drawing::Point(178, 218);
+			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
+			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::White;
+			this->button2->Location = System::Drawing::Point(179, 226);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(21, 22);
 			this->button2->TabIndex = 16;
@@ -212,8 +237,15 @@ namespace FoodOrder {
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::Color::Transparent;
-			this->button3->Location = System::Drawing::Point(132, 218);
+			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
+			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::White;
+			this->button3->Location = System::Drawing::Point(133, 226);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(21, 22);
 			this->button3->TabIndex = 17;
@@ -224,17 +256,26 @@ namespace FoodOrder {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(159, 223);
+			this->label4->BackColor = System::Drawing::Color::Black;
+			this->label4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label4->Location = System::Drawing::Point(160, 229);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(13, 13);
+			this->label4->Size = System::Drawing::Size(15, 17);
 			this->label4->TabIndex = 18;
 			this->label4->Text = L"0";
 			// 
 			// button4
 			// 
 			this->button4->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button4->Location = System::Drawing::Point(437, 337);
+			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
+			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->ForeColor = System::Drawing::SystemColors::Control;
+			this->button4->Location = System::Drawing::Point(437, 344);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(132, 43);
 			this->button4->TabIndex = 19;
@@ -245,16 +286,29 @@ namespace FoodOrder {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(353, 223);
+			this->label5->BackColor = System::Drawing::Color::Black;
+			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label5->Location = System::Drawing::Point(354, 229);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(13, 13);
+			this->label5->Size = System::Drawing::Size(15, 17);
 			this->label5->TabIndex = 26;
 			this->label5->Text = L"0";
 			// 
 			// button5
 			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->Location = System::Drawing::Point(326, 218);
+			this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
+			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button5->ForeColor = System::Drawing::Color::White;
+			this->button5->Location = System::Drawing::Point(327, 226);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(21, 22);
 			this->button5->TabIndex = 25;
@@ -264,8 +318,15 @@ namespace FoodOrder {
 			// 
 			// button6
 			// 
-			this->button6->BackColor = System::Drawing::Color::Transparent;
-			this->button6->Location = System::Drawing::Point(372, 218);
+			this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
+			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button6->ForeColor = System::Drawing::Color::White;
+			this->button6->Location = System::Drawing::Point(373, 226);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(21, 22);
 			this->button6->TabIndex = 24;
@@ -276,10 +337,15 @@ namespace FoodOrder {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->BackColor = System::Drawing::Color::Transparent;
-			this->label6->Location = System::Drawing::Point(243, 224);
+			this->label6->BackColor = System::Drawing::Color::Black;
+			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label6->Location = System::Drawing::Point(244, 229);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(56, 13);
+			this->label6->Size = System::Drawing::Size(63, 17);
 			this->label6->TabIndex = 23;
 			this->label6->Text = L"Price: ₱35";
 			// 
@@ -289,7 +355,7 @@ namespace FoodOrder {
 			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.BackgroundImage")));
 			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->pictureBox3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox3->Location = System::Drawing::Point(247, 102);
+			this->pictureBox3->Location = System::Drawing::Point(248, 111);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(142, 111);
 			this->pictureBox3->TabIndex = 22;
@@ -298,18 +364,24 @@ namespace FoodOrder {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->BackColor = System::Drawing::Color::Transparent;
-			this->label7->Location = System::Drawing::Point(290, 82);
+			this->label7->BackColor = System::Drawing::Color::Black;
+			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label7->Location = System::Drawing::Point(288, 91);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(56, 13);
+			this->label7->Size = System::Drawing::Size(68, 17);
 			this->label7->TabIndex = 21;
 			this->label7->Text = L"Coca-Cola";
 			// 
 			// pictureBox4
 			// 
 			this->pictureBox4->BackColor = System::Drawing::Color::MistyRose;
-			this->pictureBox4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox4->Location = System::Drawing::Point(237, 76);
+			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.BackgroundImage")));
+			this->pictureBox4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->pictureBox4->Location = System::Drawing::Point(238, 85);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(163, 167);
 			this->pictureBox4->TabIndex = 20;
@@ -318,16 +390,29 @@ namespace FoodOrder {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(544, 223);
+			this->label8->BackColor = System::Drawing::Color::Black;
+			this->label8->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label8->Location = System::Drawing::Point(545, 229);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(13, 13);
+			this->label8->Size = System::Drawing::Size(15, 17);
 			this->label8->TabIndex = 33;
 			this->label8->Text = L"0";
 			// 
 			// button7
 			// 
-			this->button7->BackColor = System::Drawing::Color::Transparent;
-			this->button7->Location = System::Drawing::Point(517, 218);
+			this->button7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->button7->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.BackgroundImage")));
+			this->button7->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button7->ForeColor = System::Drawing::Color::White;
+			this->button7->Location = System::Drawing::Point(518, 226);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(21, 22);
 			this->button7->TabIndex = 32;
@@ -337,8 +422,15 @@ namespace FoodOrder {
 			// 
 			// button8
 			// 
-			this->button8->BackColor = System::Drawing::Color::Transparent;
-			this->button8->Location = System::Drawing::Point(563, 218);
+			this->button8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->button8->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.BackgroundImage")));
+			this->button8->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button8->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button8->ForeColor = System::Drawing::Color::White;
+			this->button8->Location = System::Drawing::Point(564, 226);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(21, 22);
 			this->button8->TabIndex = 31;
@@ -349,10 +441,15 @@ namespace FoodOrder {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->BackColor = System::Drawing::Color::Transparent;
-			this->label9->Location = System::Drawing::Point(434, 224);
+			this->label9->BackColor = System::Drawing::Color::Black;
+			this->label9->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label9->Location = System::Drawing::Point(435, 229);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(56, 13);
+			this->label9->Size = System::Drawing::Size(63, 17);
 			this->label9->TabIndex = 30;
 			this->label9->Text = L"Price: ₱89";
 			// 
@@ -362,7 +459,7 @@ namespace FoodOrder {
 			this->pictureBox5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.BackgroundImage")));
 			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox5->Location = System::Drawing::Point(438, 102);
+			this->pictureBox5->Location = System::Drawing::Point(439, 111);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(142, 111);
 			this->pictureBox5->TabIndex = 29;
@@ -371,18 +468,24 @@ namespace FoodOrder {
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->BackColor = System::Drawing::Color::Transparent;
-			this->label10->Location = System::Drawing::Point(485, 82);
+			this->label10->BackColor = System::Drawing::Color::Black;
+			this->label10->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label10->Location = System::Drawing::Point(483, 91);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(46, 13);
+			this->label10->Size = System::Drawing::Size(54, 17);
 			this->label10->TabIndex = 28;
 			this->label10->Text = L"Chicken";
 			// 
 			// pictureBox6
 			// 
 			this->pictureBox6->BackColor = System::Drawing::Color::MistyRose;
-			this->pictureBox6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox6->Location = System::Drawing::Point(428, 76);
+			this->pictureBox6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.BackgroundImage")));
+			this->pictureBox6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->pictureBox6->Location = System::Drawing::Point(429, 85);
 			this->pictureBox6->Name = L"pictureBox6";
 			this->pictureBox6->Size = System::Drawing::Size(163, 167);
 			this->pictureBox6->TabIndex = 27;
@@ -391,16 +494,29 @@ namespace FoodOrder {
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(738, 223);
+			this->label11->BackColor = System::Drawing::Color::Black;
+			this->label11->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label11->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label11->Location = System::Drawing::Point(739, 229);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(13, 13);
+			this->label11->Size = System::Drawing::Size(15, 17);
 			this->label11->TabIndex = 40;
 			this->label11->Text = L"0";
 			// 
 			// button9
 			// 
-			this->button9->BackColor = System::Drawing::Color::Transparent;
-			this->button9->Location = System::Drawing::Point(711, 218);
+			this->button9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->button9->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.BackgroundImage")));
+			this->button9->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button9->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button9->ForeColor = System::Drawing::Color::White;
+			this->button9->Location = System::Drawing::Point(712, 226);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(21, 22);
 			this->button9->TabIndex = 39;
@@ -410,8 +526,15 @@ namespace FoodOrder {
 			// 
 			// button10
 			// 
-			this->button10->BackColor = System::Drawing::Color::Transparent;
-			this->button10->Location = System::Drawing::Point(757, 218);
+			this->button10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->button10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button10.BackgroundImage")));
+			this->button10->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button10->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button10->ForeColor = System::Drawing::Color::White;
+			this->button10->Location = System::Drawing::Point(758, 226);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(21, 22);
 			this->button10->TabIndex = 38;
@@ -422,10 +545,15 @@ namespace FoodOrder {
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->BackColor = System::Drawing::Color::Transparent;
-			this->label12->Location = System::Drawing::Point(628, 224);
+			this->label12->BackColor = System::Drawing::Color::Black;
+			this->label12->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label12->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label12->Location = System::Drawing::Point(629, 229);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(56, 13);
+			this->label12->Size = System::Drawing::Size(63, 17);
 			this->label12->TabIndex = 37;
 			this->label12->Text = L"Price: ₱50";
 			// 
@@ -435,7 +563,7 @@ namespace FoodOrder {
 			this->pictureBox7->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.BackgroundImage")));
 			this->pictureBox7->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox7->Location = System::Drawing::Point(632, 102);
+			this->pictureBox7->Location = System::Drawing::Point(633, 111);
 			this->pictureBox7->Name = L"pictureBox7";
 			this->pictureBox7->Size = System::Drawing::Size(142, 111);
 			this->pictureBox7->TabIndex = 36;
@@ -444,18 +572,24 @@ namespace FoodOrder {
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->BackColor = System::Drawing::Color::Transparent;
-			this->label13->Location = System::Drawing::Point(676, 82);
+			this->label13->BackColor = System::Drawing::Color::Black;
+			this->label13->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label13->Location = System::Drawing::Point(674, 91);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(52, 13);
+			this->label13->Size = System::Drawing::Size(59, 17);
 			this->label13->TabIndex = 35;
 			this->label13->Text = L"Spaghetti";
 			// 
 			// pictureBox8
 			// 
 			this->pictureBox8->BackColor = System::Drawing::Color::MistyRose;
-			this->pictureBox8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox8->Location = System::Drawing::Point(622, 76);
+			this->pictureBox8->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.BackgroundImage")));
+			this->pictureBox8->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->pictureBox8->Location = System::Drawing::Point(623, 85);
 			this->pictureBox8->Name = L"pictureBox8";
 			this->pictureBox8->Size = System::Drawing::Size(163, 167);
 			this->pictureBox8->TabIndex = 34;
@@ -467,6 +601,8 @@ namespace FoodOrder {
 			this->label14->BackColor = System::Drawing::Color::Transparent;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Marcellus SC", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->label14->Location = System::Drawing::Point(299, 278);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(258, 26);
@@ -477,7 +613,7 @@ namespace FoodOrder {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
+			this->BackColor = System::Drawing::Color::Black;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(832, 400);
@@ -531,10 +667,13 @@ namespace FoodOrder {
 		}
 #pragma endregion
 
+// Declare this 4 quantity.
 static int numBurgers, numCoke, numChicken, numSpaghetti;
 
+// This code is nothing to do.
 private: System::Void MenuOrder_Load(System::Object^ sender, System::EventArgs^ e) {
 }
+
 // Press back button.
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) { // back
 	this->Hide();

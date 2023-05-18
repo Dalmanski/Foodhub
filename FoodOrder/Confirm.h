@@ -1,5 +1,7 @@
 ﻿#pragma once
+// You don't need declare the form because there's no 4th form.
 
+// This code is automatially generate
 namespace FoodOrder {
 
 	using namespace System;
@@ -59,8 +61,6 @@ namespace FoodOrder {
 	protected:
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
-
-
 	private: System::Windows::Forms::Button^ button1;
 
 	private: System::Windows::Forms::Label^ label5;
@@ -75,7 +75,6 @@ namespace FoodOrder {
 	private: System::Windows::Forms::Label^ OrderList;
 	private: System::Windows::Forms::Label^ OrderAmount;
 	private: System::Windows::Forms::Label^ OrderSubTotal;
-
 
 	private:
 		/// <summary>
@@ -325,12 +324,15 @@ namespace FoodOrder {
 
 		}
 #pragma endregion
+
+	// This code can't do anything.
 	private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 private: System::Void Confirm_Load(System::Object^ sender, System::EventArgs^ e) {
 	// quan1, quan2, quan3 and quan4 declaration is at the above.
-	wchar_t pesoSign = L'\u20B1'; // A peso sign.
-	int BurgerPrize = 45, CokePrize = 35, ChickenPrize = 89, SpaghettiPrize = 50;
+	wchar_t pesoSign = L'\u20B1'; // A peso sign ₱.
+	int BurgerPrize = 45, CokePrize = 35, ChickenPrize = 89, SpaghettiPrize = 50; // Their Price.
 	int sum = 0, total = 0;
 	// If you buy a burger.
 	if (quan1 > 0) {

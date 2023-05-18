@@ -1,6 +1,8 @@
 #pragma once
+// Declare the 2nd form.
 #include "MenuOrder.h"
 
+// This code is automatically generate.
 namespace FoodOrder {
 
 	using namespace System;
@@ -166,8 +168,11 @@ namespace FoodOrder {
 
 		}
 #pragma endregion
+
+	// This code is nothing to do.
 	private: System::Void Intro_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	// When you press Order button.
 	private: System::Void OrderButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
