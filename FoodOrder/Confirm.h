@@ -19,9 +19,10 @@ namespace FoodOrder {
 	{
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::Label^ OrderPrice;
-	private: int quan1, quan2, quan3, quan4; // Declare this variables from SetData function.
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+
+	private: int quan1, quan2, quan3, quan4; // Declare this variables from SetData function.
 
 	public:
 		Form^ obj;
@@ -207,7 +208,6 @@ namespace FoodOrder {
 			this->label7->Size = System::Drawing::Size(72, 14);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"CONTACT #:";
-			this->label7->Click += gcnew System::EventHandler(this, &Confirm::label7_Click);
 			// 
 			// TotalPrice
 			// 
@@ -370,15 +370,13 @@ namespace FoodOrder {
 		}
 #pragma endregion
 
-	// This code can't do anything.
-	private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-
 private: System::Void Confirm_Load(System::Object^ sender, System::EventArgs^ e) {
 	// quan1, quan2, quan3 and quan4 declaration is at the above.
 	wchar_t pesoSign = L'\u20B1'; // A peso sign ₱.
 	int BurgerPrize = 45, CokePrize = 35, ChickenPrize = 89, SpaghettiPrize = 50; // Their Price.
-	int sum = 0, total = 0;
+	int total = 0;
+	// Remember, OrderList, OrderPrice, OrderAmount, OrderSubTotal is the name of the label.
+	// While the total is the variable and it will shown the OrderTotal label after it.
 	// If you buy a burger.
 	if (quan1 > 0) {
 		OrderList->Text += "\n" + "Burger";

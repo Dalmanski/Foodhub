@@ -172,12 +172,12 @@ namespace FoodOrder {
 	// This code is nothing to do.
 	private: System::Void Intro_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-
+	// On 1st form Intro.h
 	// When you press Order button.
 	private: System::Void OrderButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		MenuOrder^ form = gcnew MenuOrder(this);
-		form->StartPosition = FormStartPosition::CenterScreen;
+		form->StartPosition = FormStartPosition::CenterScreen; 
 		form->ShowDialog();
 	}
 	};

@@ -50,7 +50,6 @@ namespace FoodOrder {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::Label^ label2;
-
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Label^ label4;
@@ -652,7 +651,6 @@ namespace FoodOrder {
 			this->DoubleBuffered = true;
 			this->Name = L"MenuOrder";
 			this->Text = L"MenuOrder";
-			this->Load += gcnew System::EventHandler(this, &MenuOrder::MenuOrder_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
@@ -663,19 +661,16 @@ namespace FoodOrder {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
 		}
+
 #pragma endregion
 
+// This is 2nd form MenuOrder.h
 // Declare this 4 quantity.
-static int numBurgers, numCoke, numChicken, numSpaghetti;
-
-// This code is nothing to do.
-private: System::Void MenuOrder_Load(System::Object^ sender, System::EventArgs^ e) {
-}
+int numBurgers, numCoke, numChicken, numSpaghetti;
 
 // Press back button.
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) { // back
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
 	obj->Show();
 }
@@ -713,13 +708,13 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	label5->Text = numCoke.ToString();
 }
 // Minus coke quantity. Label5 is the Text Quantity.
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (System::Convert::ToInt32(label5->Text) > 0) {
-			numCoke = System::Convert::ToInt16(label5->Text);
-			numCoke--;
-			label5->Text = numCoke.ToString();
-		}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (System::Convert::ToInt32(label5->Text) > 0) {
+		numCoke = System::Convert::ToInt16(label5->Text);
+		numCoke--;
+		label5->Text = numCoke.ToString();
 	}
+}
 // Add chicken quantity. Label8 is the Text Quantity.
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 	numChicken = System::Convert::ToInt16(label8->Text);
