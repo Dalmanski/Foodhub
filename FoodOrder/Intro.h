@@ -71,6 +71,9 @@ namespace FoodOrder {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
@@ -83,6 +86,7 @@ namespace FoodOrder {
 			// 
 			// OrderButton
 			// 
+			this->OrderButton->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->OrderButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->OrderButton->Font = (gcnew System::Drawing::Font(L"Arial Unicode MS", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -96,6 +100,7 @@ namespace FoodOrder {
 			// 
 			// TitleName
 			// 
+			this->TitleName->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->TitleName->AutoSize = true;
 			this->TitleName->BackColor = System::Drawing::Color::Transparent;
 			this->TitleName->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 32.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -109,6 +114,7 @@ namespace FoodOrder {
 			// 
 			// label2
 			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 32.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -122,6 +128,7 @@ namespace FoodOrder {
 			// 
 			// label1
 			// 
+			this->label1->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"MV Boli", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -134,6 +141,7 @@ namespace FoodOrder {
 			// 
 			// label3
 			// 
+			this->label3->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"MV Boli", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -165,13 +173,13 @@ namespace FoodOrder {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
 		}
 #pragma endregion
 
 	// This code is nothing to do.
 	private: System::Void Intro_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+//-------------------------------------------------------------------------------------------------------
 	// On 1st form Intro.h
 	// When you press Order button.
 	private: System::Void OrderButton_Click(System::Object^ sender, System::EventArgs^ e) {

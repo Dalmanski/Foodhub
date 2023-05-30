@@ -136,6 +136,7 @@ namespace FoodOrder {
 			// 
 			// button1
 			// 
+			this->button1->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->button1->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
@@ -151,6 +152,7 @@ namespace FoodOrder {
 			// 
 			// label1
 			// 
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom));
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Marcellus SC", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -165,6 +167,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox1->BackColor = System::Drawing::Color::MistyRose;
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -176,6 +179,7 @@ namespace FoodOrder {
 			// 
 			// label3
 			// 
+			this->label3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::Color::Black;
 			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -191,6 +195,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox2
 			// 
+			this->pictureBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox2->BackColor = System::Drawing::Color::Snow;
 			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
@@ -203,6 +208,7 @@ namespace FoodOrder {
 			// 
 			// label2
 			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Black;
 			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -218,6 +224,7 @@ namespace FoodOrder {
 			// 
 			// button2
 			// 
+			this->button2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
@@ -236,6 +243,7 @@ namespace FoodOrder {
 			// 
 			// button3
 			// 
+			this->button3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
@@ -254,6 +262,7 @@ namespace FoodOrder {
 			// 
 			// label4
 			// 
+			this->label4->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::Color::Black;
 			this->label4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -269,6 +278,7 @@ namespace FoodOrder {
 			// 
 			// button4
 			// 
+			this->button4->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->button4->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
@@ -284,6 +294,7 @@ namespace FoodOrder {
 			// 
 			// label5
 			// 
+			this->label5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label5->AutoSize = true;
 			this->label5->BackColor = System::Drawing::Color::Black;
 			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -299,6 +310,7 @@ namespace FoodOrder {
 			// 
 			// button5
 			// 
+			this->button5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
@@ -317,6 +329,7 @@ namespace FoodOrder {
 			// 
 			// button6
 			// 
+			this->button6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
@@ -335,6 +348,7 @@ namespace FoodOrder {
 			// 
 			// label6
 			// 
+			this->label6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::Color::Black;
 			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -350,6 +364,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox3
 			// 
+			this->pictureBox3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox3->BackColor = System::Drawing::Color::Snow;
 			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.BackgroundImage")));
 			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
@@ -362,6 +377,7 @@ namespace FoodOrder {
 			// 
 			// label7
 			// 
+			this->label7->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::Color::Black;
 			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -377,6 +393,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox4
 			// 
+			this->pictureBox4->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox4->BackColor = System::Drawing::Color::MistyRose;
 			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.BackgroundImage")));
 			this->pictureBox4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -388,6 +405,7 @@ namespace FoodOrder {
 			// 
 			// label8
 			// 
+			this->label8->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::Color::Black;
 			this->label8->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -403,6 +421,7 @@ namespace FoodOrder {
 			// 
 			// button7
 			// 
+			this->button7->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->button7->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.BackgroundImage")));
@@ -421,6 +440,7 @@ namespace FoodOrder {
 			// 
 			// button8
 			// 
+			this->button8->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->button8->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.BackgroundImage")));
@@ -439,6 +459,7 @@ namespace FoodOrder {
 			// 
 			// label9
 			// 
+			this->label9->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label9->AutoSize = true;
 			this->label9->BackColor = System::Drawing::Color::Black;
 			this->label9->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -454,6 +475,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox5
 			// 
+			this->pictureBox5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox5->BackColor = System::Drawing::Color::Snow;
 			this->pictureBox5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.BackgroundImage")));
 			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
@@ -466,6 +488,7 @@ namespace FoodOrder {
 			// 
 			// label10
 			// 
+			this->label10->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label10->AutoSize = true;
 			this->label10->BackColor = System::Drawing::Color::Black;
 			this->label10->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -481,6 +504,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox6
 			// 
+			this->pictureBox6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox6->BackColor = System::Drawing::Color::MistyRose;
 			this->pictureBox6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.BackgroundImage")));
 			this->pictureBox6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -492,6 +516,7 @@ namespace FoodOrder {
 			// 
 			// label11
 			// 
+			this->label11->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label11->AutoSize = true;
 			this->label11->BackColor = System::Drawing::Color::Black;
 			this->label11->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -507,6 +532,7 @@ namespace FoodOrder {
 			// 
 			// button9
 			// 
+			this->button9->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->button9->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.BackgroundImage")));
@@ -525,6 +551,7 @@ namespace FoodOrder {
 			// 
 			// button10
 			// 
+			this->button10->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->button10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button10.BackgroundImage")));
@@ -543,6 +570,7 @@ namespace FoodOrder {
 			// 
 			// label12
 			// 
+			this->label12->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label12->AutoSize = true;
 			this->label12->BackColor = System::Drawing::Color::Black;
 			this->label12->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -558,6 +586,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox7
 			// 
+			this->pictureBox7->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox7->BackColor = System::Drawing::Color::Snow;
 			this->pictureBox7->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.BackgroundImage")));
 			this->pictureBox7->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
@@ -570,6 +599,7 @@ namespace FoodOrder {
 			// 
 			// label13
 			// 
+			this->label13->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label13->AutoSize = true;
 			this->label13->BackColor = System::Drawing::Color::Black;
 			this->label13->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -585,6 +615,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox8
 			// 
+			this->pictureBox8->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox8->BackColor = System::Drawing::Color::MistyRose;
 			this->pictureBox8->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.BackgroundImage")));
 			this->pictureBox8->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -596,6 +627,7 @@ namespace FoodOrder {
 			// 
 			// label14
 			// 
+			this->label14->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label14->AutoSize = true;
 			this->label14->BackColor = System::Drawing::Color::Transparent;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Marcellus SC", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -651,6 +683,7 @@ namespace FoodOrder {
 			this->DoubleBuffered = true;
 			this->Name = L"MenuOrder";
 			this->Text = L"MenuOrder";
+			this->Load += gcnew System::EventHandler(this, &MenuOrder::MenuOrder_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
@@ -661,8 +694,9 @@ namespace FoodOrder {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-		}
 
+		}
+//-------------------------------------------------------------------------------------------------------
 #pragma endregion
 
 // This is 2nd form MenuOrder.h
@@ -687,6 +721,7 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 		System::Windows::Forms::MessageBox::Show("You have no order yet.");
 	}
 }
+//-------------------------------------------------------------------------------------------------------
 // Add burger quantity. Label4 is the Text Quantity.
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) { 
 	numBurgers = System::Convert::ToInt16(label4->Text);
@@ -715,6 +750,7 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 		label5->Text = numCoke.ToString();
 	}
 }
+//-------------------------------------------------------------------------------------------------------
 // Add chicken quantity. Label8 is the Text Quantity.
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 	numChicken = System::Convert::ToInt16(label8->Text);
@@ -743,6 +779,8 @@ private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e
 		label11->Text = numSpaghetti.ToString();
 	}
 }
-
+//-------------------------------------------------------------------------------------------------------
+private: System::Void MenuOrder_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

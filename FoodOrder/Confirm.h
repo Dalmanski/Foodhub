@@ -115,6 +115,7 @@ namespace FoodOrder {
 			// 
 			// label1
 			// 
+			this->label1->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Maiandra GD", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -129,6 +130,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -140,6 +142,7 @@ namespace FoodOrder {
 			// 
 			// button1
 			// 
+			this->button1->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
@@ -154,6 +157,7 @@ namespace FoodOrder {
 			// 
 			// label5
 			// 
+			this->label5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label5->AutoSize = true;
 			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -166,6 +170,7 @@ namespace FoodOrder {
 			// 
 			// textBox1
 			// 
+			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->textBox1->Location = System::Drawing::Point(484, 129);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(149, 20);
@@ -173,6 +178,7 @@ namespace FoodOrder {
 			// 
 			// label6
 			// 
+			this->label6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label6->AutoSize = true;
 			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -185,6 +191,7 @@ namespace FoodOrder {
 			// 
 			// textBox2
 			// 
+			this->textBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->textBox2->Location = System::Drawing::Point(484, 159);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(149, 20);
@@ -192,6 +199,7 @@ namespace FoodOrder {
 			// 
 			// textBox3
 			// 
+			this->textBox3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->textBox3->Location = System::Drawing::Point(484, 188);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(149, 20);
@@ -199,6 +207,7 @@ namespace FoodOrder {
 			// 
 			// label7
 			// 
+			this->label7->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label7->AutoSize = true;
 			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -211,6 +220,7 @@ namespace FoodOrder {
 			// 
 			// TotalPrice
 			// 
+			this->TotalPrice->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->TotalPrice->AutoSize = true;
 			this->TotalPrice->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->TotalPrice->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -226,6 +236,7 @@ namespace FoodOrder {
 			// 
 			// button2
 			// 
+			this->button2->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
@@ -240,6 +251,7 @@ namespace FoodOrder {
 			// 
 			// OrderList
 			// 
+			this->OrderList->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->OrderList->AutoSize = true;
 			this->OrderList->BackColor = System::Drawing::SystemColors::Control;
 			this->OrderList->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -254,6 +266,7 @@ namespace FoodOrder {
 			// 
 			// OrderAmount
 			// 
+			this->OrderAmount->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->OrderAmount->AutoSize = true;
 			this->OrderAmount->BackColor = System::Drawing::SystemColors::Control;
 			this->OrderAmount->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -268,6 +281,7 @@ namespace FoodOrder {
 			// 
 			// OrderSubTotal
 			// 
+			this->OrderSubTotal->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->OrderSubTotal->AutoSize = true;
 			this->OrderSubTotal->BackColor = System::Drawing::SystemColors::Control;
 			this->OrderSubTotal->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -282,6 +296,7 @@ namespace FoodOrder {
 			// 
 			// pictureBox2
 			// 
+			this->pictureBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -293,6 +308,7 @@ namespace FoodOrder {
 			// 
 			// OrderPrice
 			// 
+			this->OrderPrice->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->OrderPrice->AutoSize = true;
 			this->OrderPrice->BackColor = System::Drawing::SystemColors::Control;
 			this->OrderPrice->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
@@ -307,6 +323,7 @@ namespace FoodOrder {
 			// 
 			// label2
 			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::SystemColors::Control;
 			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
@@ -321,6 +338,7 @@ namespace FoodOrder {
 			// 
 			// label3
 			// 
+			this->label3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::SystemColors::Control;
 			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
@@ -368,6 +386,7 @@ namespace FoodOrder {
 			this->PerformLayout();
 
 		}
+//-------------------------------------------------------------------------------------------------------
 #pragma endregion
 
 private: System::Void Confirm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -412,6 +431,7 @@ private: System::Void Confirm_Load(System::Object^ sender, System::EventArgs^ e)
 	// After that, show the total of price.
 	TotalPrice->Text = "TOTAL: " + pesoSign + total;
 }
+//-------------------------------------------------------------------------------------------------------
 // Press to go back and reset the text.
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	OrderList->Text = "ORDER:";
@@ -430,7 +450,6 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	else {
 		System::Windows::Forms::MessageBox::Show("Please complete this form.");
 	}
-	
 }
 };
 }
