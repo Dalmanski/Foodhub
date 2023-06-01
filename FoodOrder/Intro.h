@@ -40,9 +40,7 @@ namespace FoodOrder {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ OrderButton;
 	protected:
-
 	private: System::Windows::Forms::Label^ TitleName;
-
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label3;
@@ -78,9 +76,9 @@ namespace FoodOrder {
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox1->Location = System::Drawing::Point(81, 43);
+			this->pictureBox1->Location = System::Drawing::Point(112, 66);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(340, 321);
+			this->pictureBox1->Size = System::Drawing::Size(425, 381);
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -90,7 +88,7 @@ namespace FoodOrder {
 			this->OrderButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->OrderButton->Font = (gcnew System::Drawing::Font(L"Arial Unicode MS", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->OrderButton->Location = System::Drawing::Point(629, 267);
+			this->OrderButton->Location = System::Drawing::Point(810, 298);
 			this->OrderButton->Name = L"OrderButton";
 			this->OrderButton->Size = System::Drawing::Size(139, 44);
 			this->OrderButton->TabIndex = 1;
@@ -105,7 +103,7 @@ namespace FoodOrder {
 			this->TitleName->BackColor = System::Drawing::Color::Transparent;
 			this->TitleName->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 32.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->TitleName->Location = System::Drawing::Point(459, 69);
+			this->TitleName->Location = System::Drawing::Point(619, 86);
 			this->TitleName->Name = L"TitleName";
 			this->TitleName->Size = System::Drawing::Size(343, 56);
 			this->TitleName->TabIndex = 2;
@@ -119,7 +117,7 @@ namespace FoodOrder {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 32.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(505, 171);
+			this->label2->Location = System::Drawing::Point(665, 188);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(263, 56);
 			this->label2->TabIndex = 4;
@@ -133,7 +131,7 @@ namespace FoodOrder {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"MV Boli", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(537, 123);
+			this->label1->Location = System::Drawing::Point(697, 140);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(193, 49);
 			this->label1->TabIndex = 3;
@@ -144,11 +142,11 @@ namespace FoodOrder {
 			this->label3->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"MV Boli", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"MV Boli", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(441, 227);
+			this->label3->Location = System::Drawing::Point(600, 276);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(136, 204);
+			this->label3->Size = System::Drawing::Size(172, 252);
 			this->label3->TabIndex = 5;
 			this->label3->Text = L"Group 5:\r\nJayrald John Dalman\r\nHarold Dave Cabiles\r\nJudito Pepito\r\nAngelito Valde"
 				L"rama\r\nJessah Dela Pena\r\nLei Di Bacu\r\nJam Riah Manza\r\nZybelle Dugho\r\n\r\n\r\n\r\n";
@@ -159,7 +157,7 @@ namespace FoodOrder {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(831, 397);
+			this->ClientSize = System::Drawing::Size(1027, 538);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -173,10 +171,11 @@ namespace FoodOrder {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 #pragma endregion
 
-	// This code is nothing to do.
+	// Start the program
 	private: System::Void Intro_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 //-------------------------------------------------------------------------------------------------------
@@ -186,6 +185,7 @@ namespace FoodOrder {
 		this->Hide();
 		MenuOrder^ form = gcnew MenuOrder(this);
 		form->StartPosition = FormStartPosition::CenterScreen; 
+		form->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 		form->ShowDialog();
 	}
 	};
