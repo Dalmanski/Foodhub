@@ -1,8 +1,8 @@
 ﻿#pragma once
-#include <thread>
+#include <thread> // Declare thread to add delay or sleep time
 // You don't need declare the form because there's no 4th form.
 
-// This code is automatially generate
+// This code is automatically generate
 namespace FoodOrder {
 
 	using namespace System;
@@ -29,7 +29,8 @@ namespace FoodOrder {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 	private: System::Windows::Forms::Button^ btnDeleteRow;
 
-	private: int quan1, quan2, quan3, quan4, quan5, quan6; // Declare this variables from SetData function.
+	// Declare this variables from SetData function.
+	private: int quan1, quan2, quan3, quan4, quan5, quan6; 
 
 	// This is function of SetData in previous form.
 	public:
@@ -439,7 +440,6 @@ namespace FoodOrder {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
 		}
 //-------------------------------------------------------------------------------------------------------
 #pragma endregion
@@ -449,14 +449,15 @@ wchar_t pesoSign = L'\u20B1'; // A peso sign ₱.
 
 private: System::Void Confirm_Load(System::Object^ sender, System::EventArgs^ e) {
 	btnDeleteRow->Visible = false;
-	// quan1, quan2, quan3 and quan4 declaration is at the above.
-	double BurgerPrize = 45, CokePrize = 35, ChickenPrize = 89, SpaghettiPrize = 50, SundaePrize = 50, RicePrize = 15; // Their Price.
+	// [quan1, quan2, quan3 and quan4 declaration is at the above.]
+	// Their Price.
+	double BurgerPrize = 45, CokePrize = 35, ChickenPrize = 89, SpaghettiPrize = 50, SundaePrize = 50, RicePrize = 15;
 	double subtotal = 0;
 	// Set the column's DefaultCellStyle to include the peso sign
 	dataGridViewReceipt->Columns[1]->DefaultCellStyle->Format = L"₱0.00";
 	dataGridViewReceipt->Columns[3]->DefaultCellStyle->Format = L"₱0.00";
 	// dataGridViewReceipt have 4 parameters [columns] ("ORDER:", "PRICE:", "QUANTITY:", "SUBTOTAL:")
-	// Total is the variable and it will shown the OrderTotal label after it.
+	// Total is the variable and it will shown on the TotalPrice label after it.
 	// If you buy a burger.
 	if (quan1 > 0) {
 		subtotal = quan1 * BurgerPrize;
@@ -507,21 +508,28 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 // When you press confirm button.
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (textBox1->Text != "" && textBox2->Text != "" && textBox3->Text != "") {
-		System::Windows::Forms::MessageBox::Show("ORDER SUCCESS!\nWait a couple minutes until contacted by courier.\nThank you for trusting McDeeebug FoodHub!");
+		if (total != 0) {
+			System::Windows::Forms::MessageBox::Show("ORDER SUCCESS!\nWait a couple minutes until contacted by courier.\nThank you for trusting McDeeebug FoodHub!");
+		}
+		else {
+			System::Windows::Forms::MessageBox::Show("You didn't bought any order. Why did you delete all the order?");
+		}
 	}
 	else {
 		System::Windows::Forms::MessageBox::Show("Please complete this form.");
 	}
 }
 //-------------------------------------------------------------------------------------------------------
+// This will indicate about where do you click on the specific row
 int clickedRowIndex;
 
 // When you click the datagridview
 private: System::Void dataGridViewReceipt_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	// Check if a valid row is clicked
 	if (e->RowIndex >= 0 && e->RowIndex < dataGridViewReceipt->RowCount) {
-		// Display the clicked row index
+		// Show the delete button
 		btnDeleteRow->Visible = true;
+		// Display the clicked row index
 		clickedRowIndex = e->RowIndex;
 		String^ food = dataGridViewReceipt->Rows[clickedRowIndex]->Cells[0]->Value->ToString();
 		btnDeleteRow->Text = "Delete " + food;
@@ -533,13 +541,17 @@ private: System::Void dataGridViewReceipt_CellClick(System::Object^ sender, Syst
 //-------------------------------------------------------------------------------------------------------
 // When you press the delete row button
 private: System::Void btnDeleteRow_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ pesoSignRemove = L"\u20B1"; // Peso Sign to remove
+	// Peso Sign to remove
+	String^ pesoSignRemove = L"\u20B1"; 
+	// Read on the 1st column on the selected row to know the food
 	String^ food = dataGridViewReceipt->Rows[clickedRowIndex]->Cells[0]->Value->ToString();
+	// Messagebox will appear and ask if you want to delete the specific food
 	System::Windows::Forms::DialogResult result = System::Windows::Forms::MessageBox::Show("Are you sure you want to delete " + food + "?", "You sure?", System::Windows::Forms::MessageBoxButtons::YesNo, System::Windows::Forms::MessageBoxIcon::Question);
 	// If the user confirms, delete the specific food.
 	if (result == System::Windows::Forms::DialogResult::Yes) {
-		// Delete the row from the DataGridView
+		// Hide the delete button
 		btnDeleteRow->Visible = false;
+		// Read the specific row on the 4th column to get the subtotal
 		String^ valueWithPesos = dataGridViewReceipt->Rows[clickedRowIndex]->Cells[3]->Value->ToString();
 		// Remove the peso sign from the string
 		String^ valueWithoutPesos = valueWithPesos->Replace(pesoSignRemove, "");
@@ -547,7 +559,9 @@ private: System::Void btnDeleteRow_Click(System::Object^ sender, System::EventAr
 		double value = System::Double::Parse(valueWithoutPesos);
 		// Minus the total of the value
 		total -= value;
+		// Then remove on the selected row
 		dataGridViewReceipt->Rows->RemoveAt(clickedRowIndex);
+		// After that, show the total of the price
 		TotalPrice->Text = "TOTAL: " + pesoSign + total + ".00";
 	}
 }

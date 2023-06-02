@@ -190,14 +190,14 @@ namespace FoodOrder {
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Marcellus SC", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Marcellus SC", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Black;
 			this->label1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label1.Image")));
 			this->label1->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->label1->Location = System::Drawing::Point(450, 15);
+			this->label1->Location = System::Drawing::Point(432, 4);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(135, 48);
+			this->label1->Size = System::Drawing::Size(173, 62);
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"MENU";
 			// 
@@ -222,8 +222,8 @@ namespace FoodOrder {
 			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label3.Image")));
 			this->label3->Location = System::Drawing::Point(145, 75);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(71, 25);
@@ -409,8 +409,8 @@ namespace FoodOrder {
 			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label7.Image")));
 			this->label7->Location = System::Drawing::Point(349, 75);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(117, 25);
@@ -495,8 +495,8 @@ namespace FoodOrder {
 			this->label10->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label10->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label10.Image")));
 			this->label10->Location = System::Drawing::Point(584, 75);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(89, 25);
@@ -581,8 +581,8 @@ namespace FoodOrder {
 			this->label13->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label13->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label13.Image")));
 			this->label13->Location = System::Drawing::Point(802, 75);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(101, 25);
@@ -715,8 +715,8 @@ namespace FoodOrder {
 			this->label15->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label15->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label15->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label15.Image")));
 			this->label15->Location = System::Drawing::Point(363, 319);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(82, 25);
@@ -871,8 +871,8 @@ namespace FoodOrder {
 			this->label20->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label20->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label20->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->label20->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"label20.Image")));
 			this->label20->Location = System::Drawing::Point(603, 319);
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(52, 25);
