@@ -23,14 +23,14 @@ namespace FoodOrder {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::DataGridView^ dataGridViewReceipt;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 	private: System::Windows::Forms::Button^ btnDeleteRow;
 
 	// Declare this variables from SetData function.
 	private: int quan1, quan2, quan3, quan4, quan5, quan6; 
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 
 	// This is function of SetData in previous form.
 	public:
@@ -95,11 +95,12 @@ namespace FoodOrder {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Confirm::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -133,6 +134,7 @@ namespace FoodOrder {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Maiandra GD", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Black;
+			this->label1->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->label1->Location = System::Drawing::Point(363, 20);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
@@ -313,23 +315,35 @@ namespace FoodOrder {
 			this->dataGridViewReceipt->AllowUserToAddRows = false;
 			this->dataGridViewReceipt->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->dataGridViewReceipt->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->dataGridViewReceipt->BackgroundColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->dataGridViewReceipt->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->dataGridViewReceipt->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->dataGridViewReceipt->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::Raised;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridViewReceipt->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dataGridViewReceipt->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridViewReceipt->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
 				this->Column1,
 					this->Column2, this->Column3, this->Column4
 			});
-			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Info;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridViewReceipt->DefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridViewReceipt->DefaultCellStyle = dataGridViewCellStyle6;
 			this->dataGridViewReceipt->EnableHeadersVisualStyles = false;
 			this->dataGridViewReceipt->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(128)));
@@ -340,37 +354,36 @@ namespace FoodOrder {
 			this->dataGridViewReceipt->Size = System::Drawing::Size(432, 260);
 			this->dataGridViewReceipt->TabIndex = 22;
 			this->dataGridViewReceipt->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Confirm::dataGridViewReceipt_CellClick);
-			this->dataGridViewReceipt->CellDoubleClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Confirm::dataGridViewReceipt_CellDoubleClick);
 			// 
 			// Column1
 			// 
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			this->Column1->DefaultCellStyle = dataGridViewCellStyle1;
-			this->Column1->HeaderText = L"     ORDER:";
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			this->Column1->DefaultCellStyle = dataGridViewCellStyle2;
+			this->Column1->HeaderText = L"ORDER:";
 			this->Column1->Name = L"Column1";
 			this->Column1->Resizable = System::Windows::Forms::DataGridViewTriState::True;
 			// 
 			// Column2
 			// 
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			this->Column2->DefaultCellStyle = dataGridViewCellStyle2;
-			this->Column2->HeaderText = L"      PRICE:";
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			this->Column2->DefaultCellStyle = dataGridViewCellStyle3;
+			this->Column2->HeaderText = L"PRICE:";
 			this->Column2->Name = L"Column2";
 			// 
 			// Column3
 			// 
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			this->Column3->DefaultCellStyle = dataGridViewCellStyle3;
-			this->Column3->HeaderText = L"  QUANTITY:";
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			this->Column3->DefaultCellStyle = dataGridViewCellStyle4;
+			this->Column3->HeaderText = L"QUANTITY:";
 			this->Column3->Name = L"Column3";
 			// 
 			// Column4
 			// 
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column4->DefaultCellStyle = dataGridViewCellStyle4;
-			this->Column4->HeaderText = L" SUBTOTAL:";
+			this->Column4->DefaultCellStyle = dataGridViewCellStyle5;
+			this->Column4->HeaderText = L"SUBTOTAL:";
 			this->Column4->Name = L"Column4";
 			// 
 			// pictureBox2
@@ -440,6 +453,7 @@ namespace FoodOrder {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 //-------------------------------------------------------------------------------------------------------
 #pragma endregion
@@ -496,6 +510,8 @@ private: System::Void Confirm_Load(System::Object^ sender, System::EventArgs^ e)
 	}
 	// After that, show the total of price.
 	TotalPrice->Text = "TOTAL: " + pesoSign + total + ".00";
+	// Deselect the dataGridView
+	dataGridViewReceipt->ClearSelection();
 }
 //-------------------------------------------------------------------------------------------------------
 // Press to go back and reset the text.
@@ -534,7 +550,7 @@ private: System::Void dataGridViewReceipt_CellClick(System::Object^ sender, Syst
 		String^ food = dataGridViewReceipt->Rows[clickedRowIndex]->Cells[0]->Value->ToString();
 		btnDeleteRow->Text = "Delete " + food;
 		// Add delay to deselect the dataGridViewReceipt
-		Thread::Sleep(100);
+		Thread::Sleep(50);
 		dataGridViewReceipt->ClearSelection();
 	}
 }
@@ -563,6 +579,8 @@ private: System::Void btnDeleteRow_Click(System::Object^ sender, System::EventAr
 		dataGridViewReceipt->Rows->RemoveAt(clickedRowIndex);
 		// After that, show the total of the price
 		TotalPrice->Text = "TOTAL: " + pesoSign + total + ".00";
+		// Deselect the dataGridView
+		dataGridViewReceipt->ClearSelection();
 	}
 }
 //-------------------------------------------------------------------------------------------------------
@@ -576,24 +594,6 @@ private: System::Void Confirm_FormClosing(System::Object^ sender, System::Window
 	else {
 		// Cancel the closing event to prevent the form from closing
 		e->Cancel = true;
-	}
-}
-//-------------------------------------------------------------------------------------------------------
-private: bool isDoubleClickHandled = false;
-private: System::Void dataGridViewReceipt_CellDoubleClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	if (!isDoubleClickHandled) {
-		if (e->RowIndex >= 0 && e->ColumnIndex >= 0) {
-			// For example, display the selected cell value
-			DataGridViewCell^ selectedCell = dataGridViewReceipt->Rows[e->RowIndex]->Cells[e->ColumnIndex];
-		}
-		// Set the flag to indicate that the double click has been handled
-		isDoubleClickHandled = true;
-		// Disable cell selection
-		dataGridViewReceipt->ClearSelection();
-	}
-	else {
-		// Reset the flag and allow cell selection
-		isDoubleClickHandled = false;
 	}
 }
 //-------------------------------------------------------------------------------------------------------

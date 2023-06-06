@@ -3,6 +3,8 @@
 #include <string>
 
 using namespace FoodOrder;
+using namespace System;
+using namespace System::Diagnostics;
 
 [STAThreadAttribute]
 int main(array<System::String^>^ args) {
@@ -13,5 +15,9 @@ int main(array<System::String^>^ args) {
     form->StartPosition = FormStartPosition::CenterScreen;
     form->WindowState = System::Windows::Forms::FormWindowState::Maximized;
     Application::Run(form);
-	return 0;
+    return 0;
 }
+
+
+
+
